@@ -16,7 +16,7 @@ class Veiculos{
         return this.modelo;
     }
     public setModelo(modelo:string){
-        if (modelo.length<1){
+        if (modelo.length<4){
             throw new Error("Modelo Inválido.")
         }                                           //nem precisa do else.
             this.modelo = modelo;
@@ -26,7 +26,7 @@ class Veiculos{
         return this.marca;
     }
     public setMarca(marca:string){
-        if(marca.length<1){
+        if(marca.length<3){
            throw new Error("Marca Inválida.")
         }
         this.marca = marca;

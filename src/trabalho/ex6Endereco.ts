@@ -1,23 +1,17 @@
-interface IEndereco{
+interface IEndereco {
     rua:string;
     numero:number;
     bairro:string;
     cidade:string;
 }
 
-abstract class Endereco{
-    abstract endereco({rua,numero,bairro,cidade}:IEndereco):boolean;
-}
 
+const meuEndereco: IEndereco = {
+    rua: "Cristovao Colombo",
+    numero: 41,
+    bairro:'Jardim Amalia II',
+    cidade:'Volta Redonda',
+};
 
-
-class ImprimirEndereco extends Endereco{
-    endereco({rua,numero,bairro,cidade}:IEndereco):boolean{
-        console.log(rua,numero,bairro,cidade)
-        return true
-    }
-}
-
-const enderecoNovo = new ImprimirEndereco();
-console.log(enderecoNovo.endereco({rua: 'Cristovao Colombo',numero:21,bairro:'Jardim Amalia',cidade:'Volta Redonda'}))
+console.log(meuEndereco);
 

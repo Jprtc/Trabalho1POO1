@@ -11,7 +11,7 @@ var Veiculos = /** @class */ (function () {
         return this.modelo;
     };
     Veiculos.prototype.setModelo = function (modelo) {
-        if (modelo.length < 1) {
+        if (modelo.length < 4) {
             throw new Error("Modelo Inválido.");
         } //nem precisa do else.
         this.modelo = modelo;
@@ -20,7 +20,7 @@ var Veiculos = /** @class */ (function () {
         return this.marca;
     };
     Veiculos.prototype.setMarca = function (marca) {
-        if (marca.length < 1) {
+        if (marca.length < 3) {
             throw new Error("Marca Inválida.");
         }
         this.marca = marca;
